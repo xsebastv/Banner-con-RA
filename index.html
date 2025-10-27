@@ -48,23 +48,50 @@
             <div class="info-grid">
                 <div class="info-card">
                     <h3>🎬 Serie Original</h3>
-                    <p><strong>Título:</strong> Pocket Monsters (Pokémon)</p>
+                    <p><strong>Título Original:</strong> Pocket Monsters (ポケットモンスター)</p>
                     <p><strong>Estreno:</strong> 1 de abril de 1997</p>
                     <p><strong>Creador:</strong> Satoshi Tajiri</p>
-                    <p><strong>Estudio:</strong> OLM, Inc.</p>
+                    <p><strong>Estudio:</strong> OLM, Inc. / Team Kato</p>
+                    <p><strong>Género:</strong> Aventura, Fantasía, Shonen</p>
+                    <p><strong>Basado en:</strong> Videojuegos Pokémon de Game Freak</p>
                 </div>
                 <div class="info-card">
-                    <h3>📺 Temporadas</h3>
-                    <p><strong>Total:</strong> 25+ Temporadas</p>
-                    <p><strong>Episodios:</strong> 1200+ Episodios</p>
-                    <p><strong>Películas:</strong> 23 Películas</p>
-                    <p><strong>Última temporada:</strong> Pokémon Horizontes</p>
+                    <h3>📺 Temporadas y Estadísticas</h3>
+                    <p><strong>Total Temporadas:</strong> 25+ Temporadas</p>
+                    <p><strong>Total Episodios:</strong> 1200+ Episodios</p>
+                    <p><strong>Películas Teatrales:</strong> 23 Películas</p>
+                    <p><strong>Última Serie:</strong> Pokémon Horizontes (2023)</p>
+                    <p><strong>Duración Promedio:</strong> 22 minutos por episodio</p>
+                    <p><strong>Estado:</strong> En emisión activa</p>
                 </div>
                 <div class="info-card">
-                    <h3>🌟 Resumen</h3>
-                    <p>Pokémon sigue las aventuras de entrenadores que capturan y entrenan criaturas llamadas Pokémon. 
-                    La serie principal sigue a Ash Ketchum en su viaje para convertirse en un Maestro Pokémon, 
-                    haciendo amigos y enfrentándose a desafíos mientras explora diferentes regiones.</p>
+                    <h3>🌟 Resumen Oficial</h3>
+                    <p>Pokémon es una serie de anime japonesa que sigue las aventuras de entrenadores que capturan y entrenan criaturas llamadas Pokémon. La historia principal centra en Ash Ketchum (Satoshi) de Pueblo Paleta, quien sueña con convertirse en un Maestro Pokémon.</p>
+                    <p><strong>Trama:</strong> Junto a su compañero Pikachu, Ash viaja por diferentes regiones, participando en Ligas Pokémon, haciendo nuevos amigos y enfrentando al malvado Team Rocket.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏆 Regiones Pokémon</h3>
+                    <p><strong>Kanto:</strong> Región original (Temporadas 1-2)</p>
+                    <p><strong>Johto:</strong> Pokémon Gold/Silver (Temporadas 3-5)</p>
+                    <p><strong>Hoenn:</strong> Pokémon Ruby/Sapphire (Temporadas 6-8)</p>
+                    <p><strong>Sinnoh:</strong> Pokémon Diamond/Pearl (Temporadas 10-13)</p>
+                    <p><strong>Unova, Kalos, Alola, Galar:</strong> Regiones modernas</p>
+                </div>
+                <div class="info-card">
+                    <h3>🎯 Impacto Cultural</h3>
+                    <p><strong>Audiencia Global:</strong> Más de 100 países</p>
+                    <p><strong>Franquicia:</strong> Una de las más exitosas del mundo</p>
+                    <p><strong>Merchandising:</strong> Juguetes, cartas, videojuegos</p>
+                    <p><strong>Fenómeno:</strong> "Pokémania" en los años 90-2000</p>
+                    <p><strong>Premios:</strong> Múltiples reconocimientos internacionales</p>
+                </div>
+                <div class="info-card">
+                    <h3>📊 Datos de Producción</h3>
+                    <p><strong>Directores Principales:</strong> Kunihiko Yuyama, Daiki Tomiyasu</p>
+                    <p><strong>Compositor Musical:</strong> Shinji Miyazaki</p>
+                    <p><strong>Distribuidora:</strong> TV Tokyo, The Pokémon Company</p>
+                    <p><strong>Rating:</strong> Apto para todas las edades</p>
+                    <p><strong>Idiomas:</strong> Doblado en más de 20 idiomas</p>
                 </div>
             </div>
         </div>
@@ -242,10 +269,16 @@
                     embedded 
                     vr-mode-ui="enabled: false"
                     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-                    renderer="logarithmicDepthBuffer: true; precision: medium;">
+                    renderer="logarithmicDepthBuffer: true; precision: medium;"
+                    style="width: 100%; height: 100%;">
                     
                     <!-- Cámara AR con controles habilitados -->
-                    <a-camera gps-camera rotation-reader look-controls-enabled="true" arjs-look-controls="smoothingFactor: 0.1"></a-camera>
+                    <a-camera 
+                        gps-camera 
+                        rotation-reader 
+                        look-controls-enabled="true" 
+                        arjs-look-controls="smoothingFactor: 0.1"
+                        position="0 0 0"></a-camera>
                     
                     <!-- Pikachu flotando en el espacio AR -->
                     <a-entity id="pikachu-ar-simple" 
@@ -316,8 +349,10 @@
                 </button>
                 
                 <div class="ar-tips">
-                    <p>� <strong>Cómo usar:</strong> Toca el botón, permite el acceso a la cámara, y mueve tu celular para explorar.</p>
+                    <p>📱 <strong>Cómo usar:</strong> Toca el botón, permite el acceso a la cámara, y mueve tu celular para explorar.</p>
                     <p>⚡ Pikachu aparecerá frente a ti y rotará automáticamente.</p>
+                    <p>🎯 <strong>Tecnologías:</strong> A-Frame.js para modelos 3D + AR.js para Realidad Aumentada</p>
+                    <p>📊 <strong>Requisitos:</strong> Navegador compatible (Chrome, Safari, Firefox) con acceso a cámara</p>
                 </div>
             </div>
         </div>

@@ -40,7 +40,14 @@ function activarARSimple() {
         stream.getTracks().forEach(track => track.stop());
         
         // Mostrar el contenedor AR
-        arContainer.style.display = 'block';
+        arContainer.style.display = 'flex';
+        arContainer.style.position = 'fixed';
+        arContainer.style.top = '0';
+        arContainer.style.left = '0';
+        arContainer.style.width = '100vw';
+        arContainer.style.height = '100vh';
+        arContainer.style.zIndex = '9999';
+        
         arButtonContainer.style.display = 'none';
         document.body.style.overflow = 'hidden';
         
@@ -50,15 +57,25 @@ function activarARSimple() {
             if (scene) {
                 console.log('✅ Escena A-Frame cargada');
                 
+                // Asegurar que la escena ocupe toda la pantalla
+                scene.style.width = '100%';
+                scene.style.height = '100%';
+                scene.style.display = 'block';
+                
                 // Forzar renderizado
-                scene.renderer.setPixelRatio(window.devicePixelRatio);
+                if (scene.renderer) {
+                    scene.renderer.setPixelRatio(window.devicePixelRatio);
+                    scene.renderer.setSize(window.innerWidth, window.innerHeight);
+                }
                 
                 // Mostrar mensaje de éxito
                 setTimeout(() => {
                     console.log('🎉 AR listo! Pikachu debería estar visible');
+                    // Mostrar notificación al usuario
+                    showNotification('⚡ AR Activado! Mueve tu dispositivo');
                 }, 1000);
             }
-        }, 500);
+        }, 800);
         
         // Mensaje de ayuda
         console.log('💡 Tip: Mueve tu dispositivo lentamente para ver a Pikachu');

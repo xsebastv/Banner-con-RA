@@ -551,3 +551,116 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* AR Button Improvements */
+.ar-button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.ar-modes {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.btn-ar {
+    background: linear-gradient(135deg, var(--yellow-pokemon), var(--red-pokemon));
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 250px;
+}
+
+.btn-ar-primary {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border: 3px solid #FFD700;
+}
+
+.btn-ar-secondary {
+    background: linear-gradient(135deg, #3B4CCA, #667eea);
+    border: 3px solid #3B4CCA;
+}
+
+.btn-ar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+}
+
+.btn-ar:active {
+    transform: translateY(-2px);
+}
+
+.btn-ar strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.btn-ar small {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.ar-icon {
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.ar-instructions-overlay {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.ar-help-box {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid #FFD700;
+    max-width: 400px;
+}
+
+.ar-help-box p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.ar-help-box strong {
+    color: #FFD700;
+}
+
+.btn-marker-small {
+    display: inline-block;
+    background: #FFD700;
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    pointer-events: all;
+    transition: all 0.3s ease;
+}
+
+.btn-marker-small:hover {
+    background: #FFA500;
+    transform: scale(1.05);
+}

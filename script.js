@@ -60,7 +60,17 @@ function activarARSimple() {
                 // Asegurar que la escena ocupe toda la pantalla
                 scene.style.width = '100%';
                 scene.style.height = '100%';
+                scene.style.position = 'absolute';
+                scene.style.top = '0';
+                scene.style.left = '0';
                 scene.style.display = 'block';
+                
+                // Ocultar videos no deseados
+                const videos = document.querySelectorAll('video[autoplay]');
+                videos.forEach(video => {
+                    video.style.display = 'none';
+                    video.style.visibility = 'hidden';
+                });
                 
                 // Forzar renderizado
                 if (scene.renderer) {
@@ -123,18 +133,22 @@ function cerrarAR() {
     if (arButtonContainer) {
         arButtonContainer.style.display = 'block';
         document.body.style.overflow = 'auto';
-        
-        // Detener todos los streams de video
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function(stream) {
-                    stream.getTracks().forEach(track => track.stop());
-                })
-                .catch(function(error) {
-                    console.log('No hay streams activos para detener');
-                });
-        }
     }
+    
+    // Ocultar y detener todos los videos
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        video.style.display = 'none';
+        video.style.visibility = 'hidden';
+        if (video.srcObject) {
+            video.srcObject.getTracks().forEach(track => track.stop());
+        }
+        video.pause();
+        video.src = '';
+        video.load();
+    });
+    
+    console.log('✅ AR cerrado y videos limpiados');
 }
 
 // Animación de entrada para las tarjetas al hacer scroll
@@ -272,10 +286,29 @@ function showNotification(message) {
     }, 2000);
 }
 
+// Función para ocultar videos molestos constantemente
+function hideUnwantedVideos() {
+    const videos = document.querySelectorAll('video[autoplay], video[playsinline]');
+    videos.forEach(video => {
+        video.style.display = 'none !important';
+        video.style.visibility = 'hidden !important';
+        video.style.position = 'absolute';
+        video.style.top = '-9999px';
+        video.style.left = '-9999px';
+        video.style.width = '0';
+        video.style.height = '0';
+        video.style.opacity = '0';
+    });
+}
+
+// Ejecutar constantemente para evitar videos molestos
+setInterval(hideUnwantedVideos, 1000);
+
 // Inicializar todas las funciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
     initBanner();
+    hideUnwantedVideos(); // Ocultar videos desde el inicio
     // createParticles(); // Removido - muy confuso
     
     // Animar contadores cuando sean visibles

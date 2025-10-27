@@ -812,8 +812,7 @@ body {
         font-size: 0.8rem;
         margin: 0.2rem 0;
     }
-}
-
+    
     .banner-title {
         font-size: 2rem;
     }
@@ -829,6 +828,14 @@ body {
     .model-container {
         height: 300px;
     }
+    
+    .ar-section {
+        padding: 2rem 0;
+    }
+    
+    .ar-button-container {
+        padding: 1.5rem;
+    }
 }
 
 /* Mejoras generales de responsive */
@@ -840,6 +847,7 @@ img, video {
 .container {
     width: 100%;
     max-width: 1200px;
+    padding: 0 1rem;
 }
 
 /* Touch-friendly buttons */
@@ -848,8 +856,9 @@ img, video {
     .btn-secondary,
     .btn-ar,
     .btn-close-ar {
-        min-height: 44px;
-        min-width: 44px;
+        min-height: 48px;
+        min-width: 48px;
+        padding: 0.8rem 1.5rem;
     }
 }
 
@@ -1038,4 +1047,182 @@ html {
 .btn-marker-small:hover {
     background: #FFA500;
     transform: scale(1.05);
+}
+
+/* ================================
+   MEJORAS RESPONSIVE PARA MÓVILES
+   ================================ */
+
+/* Móviles pequeños (hasta 375px) */
+@media (max-width: 375px) {
+    .header .container {
+        padding: 0 10px;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .nav {
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+    
+    .banner {
+        height: 450px;
+    }
+    
+    .banner-title {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+    
+    .banner-subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .info-grid, .characters-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .info-card, .character-card {
+        padding: 1rem;
+    }
+    
+    .character-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Optimización táctil general */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar área táctil */
+    .btn-primary,
+    .btn-secondary,
+    .btn-ar,
+    .btn-close-ar,
+    .nav a {
+        min-height: 48px;
+        min-width: 48px;
+        padding: 12px 24px;
+    }
+    
+    /* Espaciado entre elementos táctiles */
+    .nav {
+        gap: 15px;
+    }
+    
+    .ar-modes {
+        gap: 15px;
+    }
+    
+    /* Eliminar efectos hover que no funcionan en móvil */
+    .info-card:hover,
+    .character-card:hover,
+    .control-item:hover {
+        transform: none;
+        box-shadow: var(--shadow);
+    }
+    
+    /* Mejorar controles AR */
+    .ar-help-box {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .banner {
+        height: 100vh;
+    }
+    
+    .banner-title {
+        font-size: 2rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+    
+    .header {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        height: 35px;
+    }
+    
+    .nav {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras para pantallas muy anchas */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .banner-title {
+        font-size: 4.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .info-grid, .characters-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+/* Accesibilidad y rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark-color: #f5f5f5;
+        --light-color: #1a1a1a;
+    }
+    
+    .header {
+        background: #2a2a2a;
+    }
+    
+    .info-card, .character-card {
+        background: #2a2a2a;
+        color: #f5f5f5;
+    }
+    
+    .footer {
+        background: #2a2a2a;
+        color: #f5f5f5;
+    }
 }

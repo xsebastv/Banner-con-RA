@@ -88,43 +88,7 @@ function activarARSimple() {
     });
 }
 
-// Función para activar AR con Marcador (backup)
-function activarARMarcador() {
-    const arContainer = document.getElementById('ar-container-marker');
-    const arButtonContainer = document.getElementById('ar-button-container');
-    
-    if (arContainer && arButtonContainer) {
-        // Verificar si el navegador soporta getUserMedia
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Solicitar permiso para acceder a la cámara
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function(stream) {
-                    // Detener el stream inmediatamente
-                    stream.getTracks().forEach(track => track.stop());
-                    
-                    // Mostrar el contenedor AR con marcador
-                    arContainer.style.display = 'block';
-                    arButtonContainer.style.display = 'none';
-                    document.body.style.overflow = 'hidden';
-                    
-                    console.log('AR con marcador activado - Apunta a un marcador Hiro');
-                    
-                    // Instrucciones
-                    setTimeout(() => {
-                        alert('📸 AR con Marcador Activado\n\n1️⃣ Descarga el marcador Hiro\n2️⃣ Imprímelo o muéstralo en otra pantalla\n3️⃣ Apunta tu cámara al marcador\n4️⃣ ¡Verás a Pikachu aparecer sobre el marcador!');
-                    }, 500);
-                })
-                .catch(function(error) {
-                    console.error('Error al acceder a la cámara:', error);
-                    alert('No se pudo acceder a la cámara. Por favor, permite el acceso a la cámara.\n\nError: ' + error.message);
-                });
-        } else {
-            alert('Tu navegador no soporta acceso a la cámara. Por favor, usa Chrome, Firefox o Safari.');
-        }
-    }
-}
-
-// Función legacy para compatibilidad (usa el modo simple)
+// Función legacy para compatibilidad
 function activarAR() {
     activarARSimple();
 }
@@ -132,16 +96,11 @@ function activarAR() {
 // Función para cerrar la Realidad Aumentada
 function cerrarAR() {
     const arContainerSimple = document.getElementById('ar-container-simple');
-    const arContainerMarker = document.getElementById('ar-container-marker');
     const arButtonContainer = document.getElementById('ar-button-container');
     
-    // Cerrar ambos contenedores
+    // Cerrar contenedor AR
     if (arContainerSimple) {
         arContainerSimple.style.display = 'none';
-    }
-    
-    if (arContainerMarker) {
-        arContainerMarker.style.display = 'none';
     }
     
     if (arButtonContainer) {

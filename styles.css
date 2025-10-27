@@ -1327,23 +1327,24 @@ html {
 }
 
 /* Dark mode support */
+/* Mantener colores claros y vibrantes siempre */
 @media (prefers-color-scheme: dark) {
     :root {
-        --dark-color: #f5f5f5;
-        --light-color: #1a1a1a;
+        --dark-color: #2C3E50;
+        --light-color: #FFFFFF;
     }
     
     .header {
-        background: #2a2a2a;
+        background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
     }
     
     .info-card, .character-card {
-        background: #2a2a2a;
-        color: #f5f5f5;
+        background: var(--card-bg);
+        color: var(--text-dark);
     }
     
     .footer {
-        background: #2a2a2a;
-        color: #f5f5f5;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F0F8FF 100%);
+        color: var(--text-dark);
     }
 }

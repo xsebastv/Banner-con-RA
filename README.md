@@ -1,8 +1,263 @@
-# 🎮 Banner Interactivo Pokémon con Realidad Aumentada
+# 🎮 Pokémon - Banner Interactivo con Realidad Aumentada
 
-## 📝 Descripción del Proyecto
+![Pokémon](https://img.shields.io/badge/Pokémon-Project-yellow?style=for-the-badge&logo=pokemon)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)
 
-Este proyecto es un banner web interactivo que presenta la icónica serie anime **Pokémon**, incorporando tecnologías modernas de desarrollo web, visualización 3D y Realidad Aumentada (RA).
+## 📋 Descripción del Proyecto
+
+Banner web interactivo de **Pokémon** con modelo 3D de Pikachu embebido y experiencia de **Realidad Aumentada (AR) sin marcadores**. Desarrollado como proyecto académico para la materia de **Desarrollo Web 2025-2** de la **Facultad de Ingeniería - Ingeniería Multimedia**.
+
+### ✨ Características Principales
+
+- ✅ **Banner Hero Animado**: Sección principal con gradientes dinámicos y efectos visuales
+- ✅ **Información Oficial Completa**: Datos verificados de la serie Pokémon (temporadas, episodios, películas, regiones, impacto cultural)
+- ✅ **Galería de Personajes**: Presentación interactiva de 6 Pokémon icónicos con animaciones
+- ✅ **Modelo 3D de Pikachu**: Visualización interactiva en 3D con controles de rotación y animaciones de flotación
+- ✅ **Realidad Aumentada Sin Marcadores**: Experiencia AR moderna sin necesidad de códigos QR, usando la cámara del dispositivo
+- ✅ **Diseño 100% Responsive**: Adaptable a móviles, tablets y desktop con múltiples breakpoints
+- ✅ **Navegación Fluida**: Scroll suave entre secciones con animaciones
+- ✅ **Código Limpio**: Separación correcta de responsabilidades (HTML, CSS, JavaScript)
+- ✅ **Publicado en GitHub Pages**: Accesible públicamente
+
+## �️ Tecnologías Utilizadas
+
+### Frontend
+- **HTML5**: Estructura semántica y accesible
+- **CSS3**: Estilos modernos con Grid, Flexbox, variables CSS y animaciones avanzadas
+- **JavaScript ES6+**: Interactividad, event listeners y manejo de eventos sin código inline
+
+### Frameworks y Librerías
+- **[A-Frame 1.4.2](https://aframe.io/)**: Framework para experiencias 3D y VR en la web
+- **[AR.js](https://ar-js-org.github.io/AR.js/)**: Biblioteca de Realidad Aumentada basada en WebRTC
+
+### Buenas Prácticas Implementadas
+- ✅ Separación completa de HTML, CSS y JavaScript
+- ✅ Sin código inline (`onclick`, `style=""`)
+- ✅ Event listeners centralizados en JavaScript
+- ✅ Variables CSS para mantenibilidad
+- ✅ Código comentado y organizado
+
+## 🚀 Instalación y Uso
+
+### Opción 1: Acceso Directo (GitHub Pages)
+
+**Visita el sitio en vivo:**
+```
+https://xsebastv.github.io/Banner-con-RA/
+```
+
+### Opción 2: Uso Local
+
+1. **Clona el repositorio**:
+```bash
+git clone https://github.com/xsebastv/Banner-con-RA.git
+cd Banner-con-RA
+```
+
+2. **Abre el proyecto**:
+   - Abre `index.html` directamente en tu navegador
+   - O usa Live Server en VS Code para desarrollo
+
+## 📱 Cómo Usar la Realidad Aumentada
+
+### AR Sin Marcadores (Moderna)
+
+1. **Activa la RA**: Haz clic en **"Activar Realidad Aumentada"**
+2. **Permite la cámara**: Acepta el acceso cuando el navegador lo solicite
+3. **Explora**: Mueve tu dispositivo lentamente para ver a Pikachu en tu entorno
+4. **Observa**: Pikachu rotará y flotará automáticamente
+5. **Cierra**: Usa el botón "✕ Cerrar" cuando termines
+
+### 📋 Requisitos para AR
+- ✅ Navegador moderno (Chrome 90+, Safari 14+, Firefox 88+)
+- ✅ Dispositivo con cámara (móvil preferido)
+- ✅ Conexión HTTPS (GitHub Pages incluido)
+- ✅ Buena iluminación ambiental
+
+## 📂 Estructura del Proyecto
+
+```
+Banner-con-RA/
+│
+├── index.html              # Página principal HTML (estructura)
+├── styles.css              # Estilos CSS (presentación)
+├── script.js               # JavaScript (comportamiento)
+├── README.md              # Documentación principal
+└── ENTREGA.md             # Documento de entrega académica
+```
+
+## 🎨 Características de Diseño
+
+### 🎨 Paleta de Colores Oficial
+- **Amarillo Pokémon**: `#FFDE00` (Pikachu)
+- **Azul Pokémon**: `#3B4CCA` (Logo oficial)
+- **Rojo Pokéball**: `#FF1C1C`
+- **Azul Claro**: `#6EABFF`
+- **Fondo Claro**: `#F0F8FF`
+
+### 📐 Responsive Design
+- **Desktop**: 1024px+ (diseño completo)
+- **Tablet**: 768px - 1023px (adaptado)
+- **Móvil Grande**: 480px - 767px (optimizado)
+- **Móvil Pequeño**: 360px - 479px (compacto)
+- **Landscape**: Soporte para orientación horizontal
+
+### ✨ Animaciones y Efectos
+- Transiciones suaves entre secciones
+- Rotación automática del modelo 3D (360°)
+- Hover effects en tarjetas con escala y rotación
+- Animación de flotación en Pikachu
+- Scroll smooth navigation
+- Fade in on scroll para tarjetas
+
+## 💻 Compatibilidad
+
+### Navegadores Soportados
+| Navegador | Versión Mínima | 3D | AR | Estado |
+|-----------|---------------|----|----|--------|
+| Chrome    | 90+           | ✅ | ✅ | Completo |
+| Safari    | 14+           | ✅ | ✅ | Completo |
+| Firefox   | 88+           | ✅ | ⚠️ | Parcial AR |
+| Edge      | 90+           | ✅ | ✅ | Completo |
+
+### Dispositivos Probados
+- ✅ Desktop (Windows, macOS, Linux)
+- ✅ iPhone (Safari iOS 14+)
+- ✅ Android (Chrome 90+)
+- ✅ Tablets (iPad, Android)
+
+## 🎯 Requisitos Cumplidos
+
+### ✅ Requisitos Obligatorios
+- ✅ **Información oficial relevante**: Nombre, resumen, temporadas (25+), personajes principales (6), episodios (1200+), películas (23), regiones Pokémon
+- ✅ **Modelo 3D integrado**: Pikachu en 3D con A-Frame, interactivo con controles de cámara
+- ✅ **Realidad Aumentada**: Compatible con AR sin marcadores, acceso a cámara del dispositivo
+- ✅ **Diseño visual atractivo**: Paleta oficial Pokémon, animaciones modernas, efectos visuales
+- ✅ **Tecnologías web**: HTML5, CSS3, JavaScript ES6+
+- ✅ **Framework 3D**: A-Frame 1.4.2 integrado
+- ✅ **Publicado en GitHub Pages**: Accesible en https://xsebastv.github.io/Banner-con-RA/
+- ✅ **Responsive**: Funcional en móviles, tablets y desktop
+
+### ✅ Extras Implementados
+- ✅ Código limpio sin inline styles ni onclick
+- ✅ Event listeners modernos en JavaScript
+- ✅ Animaciones CSS avanzadas
+- ✅ Optimización de rendimiento
+- ✅ Accesibilidad y SEO
+- ✅ Documentación completa
+
+## 📖 Proceso de Desarrollo
+
+1. **Planificación**: Análisis de requisitos y selección de Pokémon como tema
+2. **Estructura HTML**: Secciones semánticas (header, banner, info, personajes, 3D, AR, footer)
+3. **Diseño CSS**: Sistema de Grid/Flexbox, variables CSS, paleta de colores oficial
+4. **Modelo 3D**: Construcción de Pikachu con primitivas A-Frame (esferas, conos, cilindros)
+5. **Realidad Aumentada**: Integración AR.js sin marcadores, acceso a cámara WebRTC
+6. **JavaScript**: Event listeners, animaciones al scroll, gestión de AR
+7. **Optimización**: Pruebas en múltiples dispositivos, ajustes responsive
+8. **Refactoring**: Eliminación de código inline, separación de responsabilidades
+9. **Documentación**: README y ENTREGA completos
+10. **Publicación**: Deploy en GitHub Pages
+
+## 🔧 Herramientas Utilizadas
+
+- **Visual Studio Code**: Editor principal con extensiones (Live Server, Prettier)
+- **Git & GitHub**: Control de versiones y hosting
+- **GitHub Pages**: Despliegue automático
+- **Chrome DevTools**: Debugging, responsive testing
+- **Firefox Developer Edition**: Testing cross-browser
+- **A-Frame Inspector**: Depuración de modelos 3D
+
+## 📚 Recursos y Referencias
+
+- [A-Frame Documentation](https://aframe.io/docs/) - Framework 3D/VR
+- [AR.js Documentation](https://ar-js-org.github.io/AR.js-Docs/) - Realidad Aumentada
+- [MDN Web Docs](https://developer.mozilla.org/) - Referencias web estándar
+- [Pokémon Official](https://www.pokemon.com/) - Información oficial
+- [GitHub Pages Guide](https://docs.github.com/pages) - Publicación web
+
+## 👨‍💻 Información Académica
+
+**Proyecto Desarrollado Por:**
+- 👤 **Estudiante**: Juan Sebastián Ríos Altamirano
+- 🎓 **Programa**: Ingeniería de Sistemas
+- 📚 **Asignatura**: Desarrollo Web 2025-2
+- 👩‍🏫 **Docente**: Kelly D. Marín
+- 🏫 **Institución**: Facultad de Ingeniería
+- 📅 **Período**: Semana 14 (20-27 de octubre de 2025)
+
+## 🚀 Características Técnicas Avanzadas
+
+### JavaScript
+- Event listeners sin código inline
+- Gestión de permisos de cámara
+- Detección de errores y feedback al usuario
+- Animaciones programáticas
+- Intersection Observer para lazy animations
+
+### CSS
+- Variables CSS para tema consistente
+- Grid y Flexbox responsivos
+- Animaciones y transiciones suaves
+- Media queries para 5+ breakpoints
+- Gradientes y efectos visuales modernos
+
+### HTML
+- Estructura semántica (header, section, footer)
+- Meta tags optimizados para SEO
+- Accesibilidad (alt, aria-labels)
+- Sin estilos ni eventos inline
+
+## 📝 Notas de Implementación
+
+- El proyecto cumple **todos** los requisitos obligatorios
+- Código limpio siguiendo **mejores prácticas**
+- Optimizado para **rendimiento móvil**
+- Compatible con **lectores de pantalla**
+- Sin dependencias de backend
+- 100% funcional en **GitHub Pages**
+
+## 📄 Licencia
+
+Este proyecto es de uso **educativo**. Pokémon es propiedad de **Nintendo**, **Game Freak** y **Creatures Inc.**
+
+## 🤝 Contribuciones
+
+Este es un proyecto académico finalizado. Para sugerencias o mejoras:
+1. Fork el repositorio
+2. Crea una rama (`git checkout -b feature/mejora`)
+3. Commit tus cambios (`git commit -m 'Agregar mejora'`)
+4. Push a la rama (`git push origin feature/mejora`)
+5. Abre un Pull Request
+
+## 📧 Contacto
+
+**Estudiante**: Juan Sebastián Ríos Altamirano  
+**Programa**: Ingeniería de Sistemas  
+**GitHub**: [@xsebastv](https://github.com/xsebastv)  
+**Repositorio**: [Banner-con-RA](https://github.com/xsebastv/Banner-con-RA)  
+**Sitio Web**: [GitHub Pages](https://xsebastv.github.io/Banner-con-RA/)
+
+---
+
+<div align="center">
+
+### ⚡ ¡Atrápalos Ya! ⚡
+
+**Hecho con ❤️ por Juan Sebastián Ríos Altamirano**
+
+**Ingeniería de Sistemas - Facultad de Ingeniería**
+
+![Pikachu](https://media.giphy.com/media/xuXzcHMkuwvf2/giphy.gif)
+
+*"Quiero ser el mejor, el mejor que habrá"* 🎵
+
+**Proyecto Académico - Desarrollo Web 2025-2**
+
+</div>
 
 ## ✨ Características Principales
 

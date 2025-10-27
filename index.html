@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Banner interactivo de Pokémon con modelo 3D y Realidad Aumentada">
+    <title>Pokémon - Banner Interactivo con RA</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- A-Frame para modelos 3D y AR -->
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <!-- AR.js para realidad aumentada -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokémon Logo" class="logo">
+            <nav class="nav">
+                <a href="#info">Información</a>
+                <a href="#personajes">Personajes</a>
+                <a href="#modelo3d">Modelo 3D</a>
+                <a href="#ar">Realidad Aumentada</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1 class="banner-title">¡Atrápalos Ya!</h1>
+                <p class="banner-subtitle">Explora el mundo de Pokémon en 3D</p>
+                <button class="btn-primary" onclick="scrollToSection('modelo3d')">Ver Modelo 3D</button>
+                <button class="btn-secondary" onclick="activarAR()">Activar RA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Información -->
+    <section id="info" class="info-section">
+        <div class="container">
+            <h2 class="section-title">Información de la Serie</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎬 Serie Original</h3>
+                    <p><strong>Título:</strong> Pocket Monsters (Pokémon)</p>
+                    <p><strong>Estreno:</strong> 1 de abril de 1997</p>
+                    <p><strong>Creador:</strong> Satoshi Tajiri</p>
+                    <p><strong>Estudio:</strong> OLM, Inc.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📺 Temporadas</h3>
+                    <p><strong>Total:</strong> 25+ Temporadas</p>
+                    <p><strong>Episodios:</strong> 1200+ Episodios</p>
+                    <p><strong>Películas:</strong> 23 Películas</p>
+                    <p><strong>Última temporada:</strong> Pokémon Horizontes</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌟 Resumen</h3>
+                    <p>Pokémon sigue las aventuras de entrenadores que capturan y entrenan criaturas llamadas Pokémon. 
+                    La serie principal sigue a Ash Ketchum en su viaje para convertirse en un Maestro Pokémon, 
+                    haciendo amigos y enfrentándose a desafíos mientras explora diferentes regiones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Personajes -->
+    <section id="personajes" class="characters-section">
+        <div class="container">
+            <h2 class="section-title">Personajes Principales</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="character-icon">⚡</div>
+                    <h3>Pikachu</h3>
+                    <p>El compañero icónico de Ash. Pokémon tipo eléctrico conocido por su poderoso ataque "Impactrueno".</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-icon">🔥</div>
+                    <h3>Charizard</h3>
+                    <p>Pokémon tipo fuego/volador. Uno de los Pokémon más poderosos de Ash.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-icon">💧</div>
+                    <h3>Squirtle</h3>
+                    <p>Pokémon tipo agua. Miembro del Escuadrón Squirtle y uno de los iniciales de la región Kanto.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-icon">🌿</div>
+                    <h3>Bulbasaur</h3>
+                    <p>Pokémon tipo planta/veneno. Leal compañero con una planta en su espalda.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-icon">😴</div>
+                    <h3>Snorlax</h3>
+                    <p>Pokémon tipo normal conocido por su enorme apetito y amor por dormir.</p>
+                </div>
+                <div class="character-card">
+                    <div class="character-icon">👻</div>
+                    <h3>Gengar</h3>
+                    <p>Pokémon tipo fantasma/veneno. Travieso pero poderoso aliado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Modelo 3D -->
+    <section id="modelo3d" class="model-section">
+        <div class="container">
+            <h2 class="section-title">Modelo 3D Interactivo</h2>
+            <p class="section-description">Interactúa con Pikachu en 3D. Usa el mouse para rotar y hacer zoom.</p>
+            
+            <div class="model-container">
+                <a-scene embedded class="aframe-scene">
+                    <a-assets>
+                        <!-- Sky texture -->
+                        <img id="sky" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" crossorigin="anonymous">
+                    </a-assets>
+
+                    <!-- Environment -->
+                    <a-sky src="#sky" rotation="0 -130 0"></a-sky>
+                    
+                    <!-- Lighting -->
+                    <a-light type="ambient" color="#BBB"></a-light>
+                    <a-light type="directional" color="#FFF" intensity="0.6" position="-0.5 1 1"></a-light>
+                    
+                    <!-- Pikachu 3D Model (using primitive shapes) -->
+                    <a-entity id="pikachu-model" position="0 0 -4">
+                        <!-- Body -->
+                        <a-sphere color="#FFD700" radius="0.6" position="0 0 0"></a-sphere>
+                        
+                        <!-- Head -->
+                        <a-sphere color="#FFD700" radius="0.5" position="0 0.8 0"></a-sphere>
+                        
+                        <!-- Ears -->
+                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
+                                position="-0.3 1.3 0" rotation="0 0 -20">
+                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
+                                    position="0 0.3 0"></a-cone>
+                        </a-cone>
+                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
+                                position="0.3 1.3 0" rotation="0 0 20">
+                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
+                                    position="0 0.3 0"></a-cone>
+                        </a-cone>
+                        
+                        <!-- Eyes -->
+                        <a-sphere color="#1a1a1a" radius="0.08" position="-0.15 0.9 0.4"></a-sphere>
+                        <a-sphere color="#1a1a1a" radius="0.08" position="0.15 0.9 0.4"></a-sphere>
+                        
+                        <!-- Cheeks -->
+                        <a-circle color="#FF0000" radius="0.12" position="-0.35 0.75 0.35" rotation="0 -30 0"></a-circle>
+                        <a-circle color="#FF0000" radius="0.12" position="0.35 0.75 0.35" rotation="0 30 0"></a-circle>
+                        
+                        <!-- Nose -->
+                        <a-sphere color="#1a1a1a" radius="0.05" position="0 0.85 0.45"></a-sphere>
+                        
+                        <!-- Mouth -->
+                        <a-curve>
+                            <a-curve-point position="-0.1 0.7 0.45"></a-curve-point>
+                            <a-curve-point position="0 0.65 0.45"></a-curve-point>
+                            <a-curve-point position="0.1 0.7 0.45"></a-curve-point>
+                        </a-curve>
+                        
+                        <!-- Arms -->
+                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
+                                    position="-0.5 0.2 0" rotation="0 0 45"></a-cylinder>
+                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
+                                    position="0.5 0.2 0" rotation="0 0 -45"></a-cylinder>
+                        
+                        <!-- Legs -->
+                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
+                                    position="-0.25 -0.5 0"></a-cylinder>
+                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
+                                    position="0.25 -0.5 0"></a-cylinder>
+                        
+                        <!-- Tail (Lightning bolt shape) -->
+                        <a-box color="#8B4513" width="0.1" height="0.6" depth="0.1" 
+                               position="-0.4 0.3 -0.4" rotation="45 0 45"></a-box>
+                        <a-cone color="#FFD700" radius-bottom="0.2" radius-top="0.05" height="0.5" 
+                                position="-0.5 0.5 -0.5" rotation="90 45 0"></a-cone>
+                        
+                        <!-- Animation -->
+                        <a-animation attribute="rotation" 
+                                     dur="10000" 
+                                     to="0 360 0" 
+                                     easing="linear" 
+                                     repeat="indefinite"></a-animation>
+                        <a-animation attribute="position" 
+                                     dur="2000" 
+                                     from="0 0 -4" 
+                                     to="0 0.3 -4" 
+                                     direction="alternate" 
+                                     easing="ease-in-out-sine" 
+                                     repeat="indefinite"></a-animation>
+                    </a-entity>
+
+                    <!-- Camera -->
+                    <a-camera>
+                        <a-cursor color="#FFD700"></a-cursor>
+                    </a-camera>
+                </a-scene>
+            </div>
+
+            <div class="controls-info">
+                <p>💡 <strong>Controles:</strong></p>
+                <p>🖱️ <strong>Mouse:</strong> Arrastra para rotar la vista</p>
+                <p>🔍 <strong>Scroll:</strong> Acercar/alejar (en algunos navegadores)</p>
+                <p>📱 <strong>Móvil:</strong> Toca y arrastra para rotar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Realidad Aumentada -->
+    <section id="ar" class="ar-section">
+        <div class="container">
+            <h2 class="section-title">Realidad Aumentada</h2>
+            <p class="section-description">
+                Activa la cámara de tu dispositivo para ver a Pikachu en tu entorno real.
+            </p>
+            
+            <div id="ar-container" class="ar-container" style="display: none;">
+                <a-scene 
+                    embedded 
+                    arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+                    vr-mode-ui="enabled: false">
+                    
+                    <!-- Pikachu AR Model -->
+                    <a-marker preset="hiro">
+                        <a-entity position="0 0 0" scale="0.5 0.5 0.5">
+                            <!-- Same Pikachu structure but scaled -->
+                            <a-sphere color="#FFD700" radius="0.6"></a-sphere>
+                            <a-sphere color="#FFD700" radius="0.5" position="0 0.8 0"></a-sphere>
+                            
+                            <!-- Ears -->
+                            <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
+                                    position="-0.3 1.3 0" rotation="0 0 -20">
+                                <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
+                                        position="0 0.3 0"></a-cone>
+                            </a-cone>
+                            <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
+                                    position="0.3 1.3 0" rotation="0 0 20">
+                                <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
+                                        position="0 0.3 0"></a-cone>
+                            </a-cone>
+                            
+                            <!-- Eyes -->
+                            <a-sphere color="#1a1a1a" radius="0.08" position="-0.15 0.9 0.4"></a-sphere>
+                            <a-sphere color="#1a1a1a" radius="0.08" position="0.15 0.9 0.4"></a-sphere>
+                            
+                            <!-- Cheeks -->
+                            <a-circle color="#FF0000" radius="0.12" position="-0.35 0.75 0.35" rotation="0 -30 0"></a-circle>
+                            <a-circle color="#FF0000" radius="0.12" position="0.35 0.75 0.35" rotation="0 30 0"></a-circle>
+                            
+                            <!-- Animation -->
+                            <a-animation attribute="rotation" 
+                                         dur="5000" 
+                                         to="0 360 0" 
+                                         easing="linear" 
+                                         repeat="indefinite"></a-animation>
+                        </a-entity>
+                    </a-marker>
+                    
+                    <a-entity camera></a-entity>
+                </a-scene>
+                
+                <button class="btn-close-ar" onclick="cerrarAR()">Cerrar RA ✕</button>
+                
+                <div class="ar-instructions">
+                    <p>📸 Apunta tu cámara a un marcador Hiro para ver a Pikachu en AR</p>
+                    <a href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" 
+                       target="_blank" class="btn-marker">Descargar Marcador Hiro</a>
+                </div>
+            </div>
+
+            <div id="ar-button-container" class="ar-button-container">
+                <button class="btn-ar" onclick="activarAR()">
+                    <span class="ar-icon">📱</span>
+                    Activar Realidad Aumentada
+                </button>
+                <p class="ar-note">Necesitas permitir el acceso a la cámara</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Proyecto Educativo - Desarrollo Web</p>
+            <p>Ingeniería Multimedia - Facultad de Ingeniería</p>
+            <p>Pokémon es propiedad de Nintendo, Game Freak y Creatures Inc.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://www.pokemon.com" target="_blank">Pokémon Official</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

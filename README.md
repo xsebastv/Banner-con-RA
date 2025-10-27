@@ -1,77 +1,152 @@
-<div align="center"><div align="center"># 🎮 Pokémon - Banner Interactivo con Realidad Aumentada# 🎮 Pokémon - Banner Interactivo con Realidad Aumentada
+# Banner Pokémon con Realidad Aumentada<div align="center"><div align="center"># 🎮 Pokémon - Banner Interactivo con Realidad Aumentada# 🎮 Pokémon - Banner Interactivo con Realidad Aumentada
 
 
+
+**Sitio Web:** https://xsebastv.github.io/Banner-con-RA/  
+
+**Repositorio:** https://github.com/xsebastv/Banner-con-RA
 
 # ⚡ Banner Pokémon con Realidad Aumentada
 
+## Descripción
 
+
+
+Banner web interactivo de Pokémon con modelo 3D de Pikachu y experiencia de Realidad Aumentada.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)# ⚡ Pokémon - Banner Interactivo con RA
 
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+**Características principales:**
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Modelo 3D interactivo creado con A-Frame[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-[![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=flat-square&logo=aframe&logoColor=white)](https://aframe.io/)
+- Realidad Aumentada sin marcadores con AR.js
 
-[![Pokémon](https://img.shields.io/badge/Pokémon-Project-FFD700?style=for-the-badge&logo=pokemon&logoColor=white)](https://xsebastv.github.io/Banner-con-RA/)![Pokémon](https://img.shields.io/badge/Pokémon-Project-yellow?style=for-the-badge&logo=pokemon)![Pokémon](https://img.shields.io/badge/Pokémon-Project-yellow?style=for-the-badge&logo=pokemon)
+- Diseño responsive para móviles y desktop[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-**Banner web interactivo con modelo 3D de Pikachu y experiencia de Realidad Aumentada**
+- Información oficial de la serie Pokémon
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- Animaciones CSS modernas[![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=flat-square&logo=aframe&logoColor=white)](https://aframe.io/)
 
-[🌐 Ver Demo](https://xsebastv.github.io/Banner-con-RA/) • [💻 Código Fuente](https://github.com/xsebastv/Banner-con-RA)
+
+
+## Tecnologías[![Pokémon](https://img.shields.io/badge/Pokémon-Project-FFD700?style=for-the-badge&logo=pokemon&logoColor=white)](https://xsebastv.github.io/Banner-con-RA/)![Pokémon](https://img.shields.io/badge/Pokémon-Project-yellow?style=for-the-badge&logo=pokemon)![Pokémon](https://img.shields.io/badge/Pokémon-Project-yellow?style=for-the-badge&logo=pokemon)
+
+
+
+- HTML5**Banner web interactivo con modelo 3D de Pikachu y experiencia de Realidad Aumentada**
+
+- CSS3
+
+- JavaScript ES6+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+- A-Frame 1.4.2
+
+- AR.js[🌐 Ver Demo](https://xsebastv.github.io/Banner-con-RA/) • [💻 Código Fuente](https://github.com/xsebastv/Banner-con-RA)
+
+- GitHub Pages
 
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
+## Instalación
+
 </div>
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+```bash
 
----
+git clone https://github.com/xsebastv/Banner-con-RA.git[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-[![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)](https://aframe.io/)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+cd Banner-con-RA
 
-## 📋 Descripción
+```---
 
 
 
-Proyecto académico que presenta un banner web de Pokémon con las siguientes características:
+Abre `index.html` en tu navegador.[![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)](https://aframe.io/)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+
+
+## Uso de Realidad Aumentada## 📋 Descripción
+
+
+
+1. Haz clic en "Activar Realidad Aumentada"
+
+2. Permite acceso a la cámara
+
+3. Mueve tu dispositivo lentamenteProyecto académico que presenta un banner web de Pokémon con las siguientes características:
+
+4. Pikachu aparecerá en tu entorno
 
 ### 🎓 Proyecto Académico - Desarrollo Web 2025-2![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+**Requisitos:** Chrome 90+ o Safari 14+
+
 - 🎮 **Modelo 3D interactivo** de Pikachu creado con A-Frame
+
+## Estructura
 
 - 📷 **Realidad Aumentada** sin marcadores usando AR.js
 
-- 📱 **Diseño responsive** adaptado a todos los dispositivos
+```
 
-- 🎨 **Animaciones modernas** con CSS3**Banner web interactivo de Pokémon con modelo 3D de Pikachu y Realidad Aumentada**![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)
+Banner-con-RA/- 📱 **Diseño responsive** adaptado a todos los dispositivos
 
-- ⚡ **Información oficial** de la serie Pokémon
+├── index.html
+
+├── styles.css- 🎨 **Animaciones modernas** con CSS3**Banner web interactivo de Pokémon con modelo 3D de Pikachu y Realidad Aumentada**![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)![A-Frame](https://img.shields.io/badge/A--Frame-EF2D5E?style=for-the-badge&logo=aframe&logoColor=white)
+
+├── script.js
+
+├── README.md- ⚡ **Información oficial** de la serie Pokémon
+
+└── ENTREGA.md
+
+```
 
 
 
----
-
-[🌐 Ver Demo](https://xsebastv.github.io/Banner-con-RA/) • [📂 Repositorio](https://github.com/xsebastv/Banner-con-RA) • [📄 Documentación](#-tabla-de-contenidos)
-
-## 🛠️ Tecnologías
+## Requisitos Cumplidos---
 
 
+
+- ✅ Información oficial de Pokémon[🌐 Ver Demo](https://xsebastv.github.io/Banner-con-RA/) • [📂 Repositorio](https://github.com/xsebastv/Banner-con-RA) • [📄 Documentación](#-tabla-de-contenidos)
+
+- ✅ Modelo 3D integrado
+
+- ✅ Realidad Aumentada funcional## 🛠️ Tecnologías
+
+- ✅ Diseño responsive
+
+- ✅ Código limpio sin inline
+
+- ✅ Publicado en GitHub Pages
 
 - **HTML5** - Estructura semántica
 
+## Compatibilidad
+
 - **CSS3** - Diseño responsive y animaciones---## 📋 Descripción del Proyecto## 📋 Descripción del Proyecto
 
-- **JavaScript ES6+** - Interactividad
+- Chrome 90+: 3D ✅ AR ✅
 
-- **A-Frame 1.4.2** - Modelo 3D
+- Safari 14+: 3D ✅ AR ✅- **JavaScript ES6+** - Interactividad
 
-- **AR.js** - Realidad Aumentada
+- Firefox 88+: 3D ✅ AR ⚠️
 
-- **GitHub Pages** - Hosting</div>
+- Edge 90+: 3D ✅ AR ✅- **A-Frame 1.4.2** - Modelo 3D
 
+
+
+## Autor- **AR.js** - Realidad Aumentada
+
+
+
+**Juan Sebastián Ríos Altamirano**  - **GitHub Pages** - Hosting</div>
+
+Ingeniería de Sistemas  
+
+Desarrollo Web 2025-2
 
 
 ---

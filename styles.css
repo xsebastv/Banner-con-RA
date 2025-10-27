@@ -503,7 +503,29 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .banner-title {
+        font-size: 3rem;
+    }
+    
+    .model-container {
+        height: 500px;
+    }
+    
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .banner {
+        height: 500px;
+    }
+
     .banner-title {
         font-size: 2.5rem;
     }
@@ -511,14 +533,34 @@ body {
     .banner-subtitle {
         font-size: 1.2rem;
     }
+    
+    .banner-content {
+        padding: 20px;
+    }
 
     .nav {
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
         font-size: 0.9rem;
+        align-items: center;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        height: 50px;
     }
 
     .section-title {
         font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        padding: 0 15px;
     }
 
     .info-grid,
@@ -526,30 +568,98 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    
+    .info-card,
+    .character-card {
+        max-width: 100%;
+    }
 
     .model-container {
         height: 400px;
+        margin: 20px 0;
+    }
+    
+    .controls-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .controls-info {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    .controls-info h4 {
+        font-size: 1.3rem;
     }
 
     .btn-primary,
-    .btn-secondary,
-    .btn-ar {
+    .btn-secondary {
         padding: 12px 25px;
         font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
     }
-
-    .ar-instructions {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .header .container {
+    
+    .ar-modes {
         flex-direction: column;
-        gap: 15px;
+        gap: 1rem;
+        padding: 0 15px;
+    }
+    
+    .btn-ar {
+        width: 100%;
+        max-width: 400px;
+        padding: 1.2rem 1.5rem;
+        font-size: 0.95rem;
+        min-width: auto;
+    }
+    
+    .btn-ar strong {
+        font-size: 1.1rem;
+    }
+    
+    .btn-ar small {
+        font-size: 0.8rem;
     }
 
-    .logo {
-        height: 40px;
+    .ar-instructions-overlay {
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        transform: none;
+    }
+    
+    .ar-help-box {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    
+    .ar-help-box p {
+        font-size: 0.9rem;
+    }
+    
+    .ar-info-box,
+    .ar-tips {
+        padding: 1rem;
+        margin: 1rem 15px;
+    }
+
+    .btn-close-ar {
+        top: 10px;
+        right: 10px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
     }
 }
 
@@ -557,6 +667,152 @@ body {
     .banner {
         height: 400px;
     }
+
+    .banner-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .banner-subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .nav {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    .model-container {
+        height: 300px;
+    }
+    
+    .controls-info {
+        padding: 15px;
+    }
+    
+    .controls-info h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .control-item {
+        padding: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .control-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .character-icon {
+        font-size: 3rem;
+    }
+    
+    .info-card,
+    .character-card {
+        padding: 15px;
+    }
+    
+    .btn-ar {
+        padding: 1rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-ar strong {
+        font-size: 1rem;
+    }
+    
+    .btn-ar small {
+        font-size: 0.75rem;
+    }
+    
+    .ar-icon {
+        font-size: 1.5rem;
+    }
+    
+    .ar-help-box {
+        padding: 0.8rem;
+    }
+    
+    .ar-help-box p {
+        font-size: 0.85rem;
+        margin: 0.3rem 0;
+    }
+    
+    .ar-info-box h3 {
+        font-size: 1.1rem;
+    }
+    
+    .ar-tips p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .banner-title {
+        font-size: 1.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .model-container {
+        height: 250px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-ar {
+        padding: 0.8rem 1rem;
+    }
+}
+
+/* Landscape Mode para móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .banner {
+        height: 100vh;
+    }
+    
+    .model-container {
+        height: 350px;
+    }
+    
+    .ar-instructions-overlay {
+        top: 10px;
+    }
+    
+    .ar-help-box {
+        padding: 0.5rem 1rem;
+    }
+    
+    .ar-help-box p {
+        font-size: 0.8rem;
+        margin: 0.2rem 0;
+    }
+}
 
     .banner-title {
         font-size: 2rem;
@@ -572,6 +828,28 @@ body {
 
     .model-container {
         height: 300px;
+    }
+}
+
+/* Mejoras generales de responsive */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Touch-friendly buttons */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-ar,
+    .btn-close-ar {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
 

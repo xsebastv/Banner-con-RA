@@ -39,8 +39,8 @@ function activarARSimple() {
         // Detener el stream de prueba
         stream.getTracks().forEach(track => track.stop());
         
-        // Mostrar el contenedor AR
-        arContainer.style.display = 'flex';
+        // Mostrar el contenedor AR CORRECTAMENTE
+        arContainer.style.display = 'block';
         arContainer.style.position = 'fixed';
         arContainer.style.top = '0';
         arContainer.style.left = '0';
@@ -162,15 +162,14 @@ function animateOnScroll() {
     });
 }
 
-// Efecto parallax para el banner
-function parallaxEffect() {
-    window.addEventListener('scroll', () => {
-        const banner = document.querySelector('.banner');
-        if (banner) {
-            const scrolled = window.pageYOffset;
-            banner.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
+// Banner fijo - sin parallax molesto
+function initBanner() {
+    const banner = document.querySelector('.banner');
+    if (banner) {
+        // Mantener el banner fijo y estable
+        banner.style.transform = 'none';
+        banner.style.position = 'relative';
+    }
 }
 
 // Función para mostrar el marcador Hiro
@@ -276,8 +275,8 @@ function showNotification(message) {
 // Inicializar todas las funciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
-    parallaxEffect();
-    createParticles();
+    initBanner();
+    // createParticles(); // Removido - muy confuso
     
     // Animar contadores cuando sean visibles
     const infoSection = document.querySelector('.info-section');

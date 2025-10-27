@@ -1,52 +1,52 @@
-# Documento de Entrega - Semana 14<div align="center"><div align="center"># 📝 ENTREGA FINAL - SEMANA 14# 📝 ENTREGA FINAL - SEMANA 14
+# Documento de Entrega - Semana 14# Documento de Entrega - Semana 14<div align="center"><div align="center"># 📝 ENTREGA FINAL - SEMANA 14# 📝 ENTREGA FINAL - SEMANA 14
 
 
+
+Proyecto: Banner Pokémon con Realidad Aumentada  
+
+Asignatura: Desarrollo Web 2025-2
 
 **Proyecto:** Banner Pokémon con Realidad Aumentada  
 
-**Asignatura:** Desarrollo Web 2025-2
-
-# 📝 Documento de Entrega - Semana 14
-
 ---
 
-
+**Asignatura:** Desarrollo Web 2025-2
 
 ## Información del Estudiante
 
-## Banner Pokémon con Realidad Aumentada# 📝 ENTREGA FINAL - SEMANA 14## Banner Anime con Modelo de RA - Pokémon## Banner Anime con Modelo de RA - Pokémon
+# 📝 Documento de Entrega - Semana 14
 
-**Nombre:** Juan Sebastián Ríos Altamirano  
+Nombre: Juan Sebastián Ríos Altamirano  
+
+Programa: Ingeniería de Sistemas  ---
+
+Docente: Kelly D. Marín  
+
+Semana: 14 (20-27 octubre 2025)
+
+
+
+---## Información del Estudiante
+
+
+
+## Enlaces del Proyecto## Banner Pokémon con Realidad Aumentada# 📝 ENTREGA FINAL - SEMANA 14## Banner Anime con Modelo de RA - Pokémon## Banner Anime con Modelo de RA - Pokémon
+
+
+
+Sitio Web: https://xsebastv.github.io/Banner-con-RA/  **Nombre:** Juan Sebastián Ríos Altamirano  
+
+Repositorio: https://github.com/xsebastv/Banner-con-RA
 
 **Programa:** Ingeniería de Sistemas  
 
+---
+
 **Docente:** Kelly D. Marín  
-
-**Semana:** 14 (20-27 octubre 2025)**Desarrollo Web 2025-2**
-
-
-
----
-
-
-
-## Enlaces del Proyecto</div>## 🎮 Banner Anime con Modelo de RA - Pokémon
-
-
-
-**Sitio Web:** https://xsebastv.github.io/Banner-con-RA/  
-
-**Repositorio:** https://github.com/xsebastv/Banner-con-RA
-
----
-
----
-
-
 
 ## Descripción del Proyecto
 
-## 👨‍🎓 Información del Estudiante**Proyecto Académico • Desarrollo Web 2025-2**------
+**Semana:** 14 (20-27 octubre 2025)**Desarrollo Web 2025-2**
 
 Este proyecto implementa un banner web interactivo de Pokémon con modelo 3D y Realidad Aumentada, cumpliendo todos los requisitos establecidos.
 
@@ -54,67 +54,67 @@ Este proyecto implementa un banner web interactivo de Pokémon con modelo 3D y R
 
 ### Desarrollo Técnico
 
-| Campo | Información |
+---
 
 Se estructuró el sitio con HTML5 semántico en seis secciones, incluyendo información oficial de Pokémon (25+ temporadas, 1200+ episodios, 23 películas, regiones y personajes principales). El diseño responsive se implementó con CSS3 Grid/Flexbox y cinco breakpoints (1024px, 768px, 480px, 375px, 360px).
 
-|:------|:------------|
+
 
 ### Modelo 3D
 
-| **Nombre** | Juan Sebastián Ríos Altamirano |---
+## Enlaces del Proyecto</div>## 🎮 Banner Anime con Modelo de RA - Pokémon
 
 Se integró A-Frame.js v1.4.2 para crear un Pikachu 3D usando primitivas geométricas (esferas, conos, cilindros, cajas). El modelo incluye animaciones de rotación 360° y flotación, con controles interactivos para PC (mouse) y móvil (touch).
 
-| **Programa** | Ingeniería de Sistemas |
+
 
 ### Realidad Aumentada
 
-| **Asignatura** | Desarrollo Web 2025-2 |
+**Sitio Web:** https://xsebastv.github.io/Banner-con-RA/  
 
 Se implementó AR.js para experiencias AR sin marcadores, con acceso a cámara mediante WebRTC API, sistema de manejo de permisos/errores y controles intuitivos de activación/cierre.
 
-| **Docente** | Kelly D. Marín |
+**Repositorio:** https://github.com/xsebastv/Banner-con-RA
 
 ### Optimización
 
-| **Semana** | 14 (20-27 octubre 2025) |</div>### 👨‍🎓 Información del Estudiante### 👨‍🎓 Información del Estudiante
+---
 
 Se desarrolló JavaScript ES6+ con event listeners modernos, eliminando código inline. Se aplicó separación de responsabilidades: HTML (estructura), CSS (presentación), JavaScript (comportamiento). El sitio está publicado en GitHub Pages y probado en múltiples navegadores.
 
-
-
 ---
 
 ---
+
+
 
 ## Tecnologías Utilizadas
 
+## Descripción del Proyecto
 
+Frontend:
 
-**Frontend:**
-
-- HTML5## 🔗 Enlaces## 👨‍🎓 Información del Estudiante- **Nombre**: Juan Sebastián Ríos Altamirano- **Nombre**: Juan Sebastián Ríos Altamirano
+- HTML5## 👨‍🎓 Información del Estudiante**Proyecto Académico • Desarrollo Web 2025-2**------
 
 - CSS3
 
-- JavaScript ES6+
+- JavaScript ES6+Este proyecto implementa un banner web interactivo de Pokémon con modelo 3D y Realidad Aumentada, cumpliendo todos los requisitos establecidos.
 
 
 
-**Librerías:****🌐 Sitio Web:** https://xsebastv.github.io/Banner-con-RA/  
+Librerías:
 
 - A-Frame 1.4.2
 
-- AR.js**💻 Repositorio:** https://github.com/xsebastv/Banner-con-RA
+- AR.js### Desarrollo Técnico
 
 - WebRTC API
 
-| Campo | Información |- **Programa**: Ingeniería de Sistemas- **Programa**: Ingeniería de Sistemas
+| Campo | Información |
 
-**Herramientas:**
+Herramientas:
 
-- Visual Studio Code---
+- Visual Studio CodeSe estructuró el sitio con HTML5 semántico en seis secciones, incluyendo información oficial de Pokémon (25+ temporadas, 1200+ episodios, 23 películas, regiones y personajes principales). El diseño responsive se implementó con CSS3 Grid/Flexbox y cinco breakpoints (1024px, 768px, 480px, 375px, 360px).
 
 - Git & GitHub
 
@@ -122,21 +122,161 @@ Se desarrolló JavaScript ES6+ con event listeners modernos, eliminando código 
 
 - Chrome DevTools
 
-## 📋 Descripción del Proyecto
+### Modelo 3D
 
 ---
 
-| **👤 Nombre** | Juan Sebastián Ríos Altamirano |- **Asignatura**: Desarrollo Web 2025-2- **Asignatura**: Desarrollo Web 2025-2
+| **Nombre** | Juan Sebastián Ríos Altamirano |---
 
 ## Requisitos Cumplidos
 
-Este proyecto implementa un **banner web interactivo de Pokémon** con modelo 3D y Realidad Aumentada, cumpliendo todos los requisitos establecidos.
+Se integró A-Frame.js v1.4.2 para crear un Pikachu 3D usando primitivas geométricas (esferas, conos, cilindros, cajas). El modelo incluye animaciones de rotación 360° y flotación, con controles interactivos para PC (mouse) y móvil (touch).
 
 - ✅ Información oficial de Pokémon (25+ temporadas, 1200+ episodios, 23 películas)
 
-- ✅ Modelo 3D integrado (Pikachu con A-Frame, rotación y flotación)| **🎓 Programa** | Ingeniería de Sistemas |
+- ✅ Modelo 3D integrado (Pikachu con A-Frame, rotación y flotación)| **Programa** | Ingeniería de Sistemas |
 
 - ✅ Realidad Aumentada (AR sin marcadores, acceso a cámara)
+
+- ✅ HTML/CSS/JavaScript (código limpio, sin inline)### Realidad Aumentada
+
+- ✅ Diseño responsive (5 breakpoints, probado en móviles)
+
+- ✅ Publicado en GitHub Pages (funcional y accesible)| **Asignatura** | Desarrollo Web 2025-2 |
+
+- ✅ Repositorio público (código disponible)
+
+- ✅ Diseño atractivo (paleta oficial, animaciones modernas)Se implementó AR.js para experiencias AR sin marcadores, con acceso a cámara mediante WebRTC API, sistema de manejo de permisos/errores y controles intuitivos de activación/cierre.
+
+
+
+---| **Docente** | Kelly D. Marín |
+
+
+
+## Especificaciones Técnicas### Optimización
+
+
+
+### Compatibilidad| **Semana** | 14 (20-27 octubre 2025) |</div>### 👨‍🎓 Información del Estudiante### 👨‍🎓 Información del Estudiante
+
+
+
+- Chrome 90+: 3D ✅ AR ✅Se desarrolló JavaScript ES6+ con event listeners modernos, eliminando código inline. Se aplicó separación de responsabilidades: HTML (estructura), CSS (presentación), JavaScript (comportamiento). El sitio está publicado en GitHub Pages y probado en múltiples navegadores.
+
+- Safari 14+: 3D ✅ AR ✅
+
+- Firefox 88+: 3D ✅ AR ⚠️
+
+- Edge 90+: 3D ✅ AR ✅
+
+---
+
+### Rendimiento
+
+---
+
+- Tiempo de carga: < 3 segundos
+
+- Tamaño total: ~300KB## Tecnologías Utilizadas
+
+- FPS modelo 3D: 60fps
+
+- Breakpoints: 5 (1024px, 768px, 480px, 375px, 360px)
+
+
+
+### Dispositivos Probados**Frontend:**
+
+
+
+- Desktop (Windows, macOS)- HTML5## 🔗 Enlaces## 👨‍🎓 Información del Estudiante- **Nombre**: Juan Sebastián Ríos Altamirano- **Nombre**: Juan Sebastián Ríos Altamirano
+
+- iPhone (iOS 14+)
+
+- Android (Chrome 90+)- CSS3
+
+- Tablets
+
+- JavaScript ES6+
+
+---
+
+
+
+## Estructura del Código
+
+**Librerías:****🌐 Sitio Web:** https://xsebastv.github.io/Banner-con-RA/  
+
+```
+
+Banner-con-RA/- A-Frame 1.4.2
+
+├── index.html
+
+├── styles.css- AR.js**💻 Repositorio:** https://github.com/xsebastv/Banner-con-RA
+
+├── script.js
+
+├── README.md- WebRTC API
+
+└── ENTREGA.md
+
+```| Campo | Información |- **Programa**: Ingeniería de Sistemas- **Programa**: Ingeniería de Sistemas
+
+
+
+---**Herramientas:**
+
+
+
+## Competencias Desarrolladas- Visual Studio Code---
+
+
+
+- Desarrollo web moderno (HTML5, CSS3, JavaScript ES6+)- Git & GitHub
+
+- Integración de tecnologías 3D (A-Frame)
+
+- Implementación de Realidad Aumentada (AR.js)- GitHub Pages|:------|:------------|
+
+- Diseño responsive y accesible
+
+- Publicación en GitHub Pages- Chrome DevTools
+
+- Buenas prácticas de programación
+
+- Control de versiones con Git## 📋 Descripción del Proyecto
+
+
+
+------
+
+
+
+## Conclusión| **👤 Nombre** | Juan Sebastián Ríos Altamirano |- **Asignatura**: Desarrollo Web 2025-2- **Asignatura**: Desarrollo Web 2025-2
+
+
+
+Este proyecto cumple satisfactoriamente con todos los requisitos establecidos para la asignatura. Se implementó un banner web interactivo de Pokémon con modelo 3D funcional y experiencia de Realidad Aumentada, aplicando tecnologías modernas y buenas prácticas de desarrollo web.## Requisitos Cumplidos
+
+
+
+El sitio está publicado y accesible en GitHub Pages, funcionando correctamente en múltiples dispositivos y navegadores.Este proyecto implementa un **banner web interactivo de Pokémon** con modelo 3D y Realidad Aumentada, cumpliendo todos los requisitos establecidos.
+
+
+
+---- ✅ Información oficial de Pokémon (25+ temporadas, 1200+ episodios, 23 películas)
+
+
+
+Juan Sebastián Ríos Altamirano  - ✅ Modelo 3D integrado (Pikachu con A-Frame, rotación y flotación)| **🎓 Programa** | Ingeniería de Sistemas |
+
+Ingeniería de Sistemas  
+
+Desarrollo Web 2025-2  - ✅ Realidad Aumentada (AR sin marcadores, acceso a cámara)
+
+Entregado: 27 de octubre de 2025
 
 - ✅ HTML/CSS/JavaScript (código limpio, sin inline)**Desarrollo:** Se estructuró el sitio con HTML5 semántico en seis secciones, incluyendo información oficial de Pokémon (25+ temporadas, 1200+ episodios, 23 películas, regiones y personajes principales). El diseño responsive se implementó con CSS3 Grid/Flexbox y cinco breakpoints (1024px, 768px, 480px, 375px, 360px).
 

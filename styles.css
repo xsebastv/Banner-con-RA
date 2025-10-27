@@ -302,6 +302,12 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     background: #87CEEB;
+    cursor: grab;
+    position: relative;
+}
+
+.model-container:active {
+    cursor: grabbing;
 }
 
 .aframe-scene {
@@ -314,17 +320,60 @@ body {
 .controls-info {
     text-align: center;
     margin-top: 30px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    max-width: 600px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.controls-info h4 {
+    color: var(--blue-pokemon);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.control-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid var(--yellow-pokemon);
+    transition: all 0.3s ease;
+}
+
+.control-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.control-icon {
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.control-item strong {
+    color: var(--blue-pokemon);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
 }
 
 .controls-info p {
-    margin: 10px 0;
-    font-size: 1.1rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
 }
 
 /* AR Section */

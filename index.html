@@ -109,7 +109,7 @@
     <section id="modelo3d" class="model-section">
         <div class="container">
             <h2 class="section-title">Modelo 3D Interactivo</h2>
-            <p class="section-description">Mira a Pikachu girar en 3D. El modelo rota automáticamente.</p>
+            <p class="section-description">🖱️ Arrastra con el mouse para rotar | 📱 En móvil: toca y arrastra</p>
             
             <div class="model-container">
                 <a-scene embedded class="aframe-scene" background="color: #87CEEB">
@@ -117,8 +117,12 @@
                     <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
                     <a-light type="directional" color="#ffffff" intensity="0.5" position="2 4 2"></a-light>
                     
-                    <!-- Pikachu 3D Model -->
-                    <a-entity id="pikachu-model" position="0 0.5 -3" rotation="0 0 0">
+                    <!-- Pikachu 3D Model con interactividad -->
+                    <a-entity id="pikachu-model" 
+                              position="0 0.5 -3" 
+                              rotation="0 0 0"
+                              class="interactive"
+                              animation__float="property: position; from: 0 0.3 -3; to: 0 0.7 -3; dur: 2000; dir: alternate; loop: true; easing: easeInOutSine">
                         <!-- Cuerpo -->
                         <a-sphere color="#FFD700" radius="0.5" position="0 0 0"></a-sphere>
                         
@@ -179,35 +183,43 @@
                                position="-0.45 0.5 -0.45" rotation="0 45 30"></a-box>
                         <a-box color="#FFD700" width="0.2" height="0.06" depth="0.06" 
                                position="-0.55 0.65 -0.5" rotation="0 45 -20"></a-box>
-                        
-                        <!-- Animación de rotación continua -->
-                        <a-animation attribute="rotation" 
-                                     from="0 0 0"
-                                     to="0 360 0" 
-                                     dur="8000" 
-                                     easing="linear" 
-                                     repeat="indefinite"></a-animation>
-                        
-                        <!-- Animación de flotación -->
-                        <a-animation attribute="position" 
-                                     from="0 0.5 -3" 
-                                     to="0 0.7 -3" 
-                                     dur="2000" 
-                                     direction="alternate" 
-                                     easing="ease-in-out-sine" 
-                                     repeat="indefinite"></a-animation>
                     </a-entity>
 
                     <!-- Suelo/Plataforma -->
                     <a-circle color="#90EE90" radius="1.5" rotation="-90 0 0" position="0 -0.6 -3"></a-circle>
 
-                    <!-- Cámara fija -->
-                    <a-entity camera look-controls="enabled: false" position="0 1.6 0"></a-entity>
+                    <!-- Cámara con controles de mouse habilitados -->
+                    <a-entity camera look-controls="enabled: true; reverseMouseDrag: true" 
+                              position="0 1.6 0"
+                              mouse-cursor=""></a-entity>
                 </a-scene>
             </div>
 
             <div class="controls-info">
-                <p>💡 <strong>Info:</strong> Pikachu gira automáticamente y flota. ¡Disfruta la vista!</p>
+                <h4>🎮 Controles Interactivos</h4>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <span class="control-icon">�️</span>
+                        <div>
+                            <strong>PC/Laptop:</strong>
+                            <p>Haz clic y arrastra para rotar la vista</p>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-icon">📱</span>
+                        <div>
+                            <strong>Móvil/Tablet:</strong>
+                            <p>Toca y arrastra con un dedo para rotar</p>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <span class="control-icon">⚡</span>
+                        <div>
+                            <strong>Efecto:</strong>
+                            <p>Pikachu flota automáticamente</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

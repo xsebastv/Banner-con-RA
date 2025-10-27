@@ -109,105 +109,105 @@
     <section id="modelo3d" class="model-section">
         <div class="container">
             <h2 class="section-title">Modelo 3D Interactivo</h2>
-            <p class="section-description">Interactúa con Pikachu en 3D. Usa el mouse para rotar y hacer zoom.</p>
+            <p class="section-description">Mira a Pikachu girar en 3D. El modelo rota automáticamente.</p>
             
             <div class="model-container">
-                <a-scene embedded class="aframe-scene">
-                    <a-assets>
-                        <!-- Sky texture -->
-                        <img id="sky" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg" crossorigin="anonymous">
-                    </a-assets>
-
-                    <!-- Environment -->
-                    <a-sky src="#sky" rotation="0 -130 0"></a-sky>
-                    
+                <a-scene embedded class="aframe-scene" background="color: #87CEEB">
                     <!-- Lighting -->
-                    <a-light type="ambient" color="#BBB"></a-light>
-                    <a-light type="directional" color="#FFF" intensity="0.6" position="-0.5 1 1"></a-light>
+                    <a-light type="ambient" color="#ffffff" intensity="0.8"></a-light>
+                    <a-light type="directional" color="#ffffff" intensity="0.5" position="2 4 2"></a-light>
                     
-                    <!-- Pikachu 3D Model (using primitive shapes) -->
-                    <a-entity id="pikachu-model" position="0 0 -4">
-                        <!-- Body -->
-                        <a-sphere color="#FFD700" radius="0.6" position="0 0 0"></a-sphere>
+                    <!-- Pikachu 3D Model -->
+                    <a-entity id="pikachu-model" position="0 0.5 -3" rotation="0 0 0">
+                        <!-- Cuerpo -->
+                        <a-sphere color="#FFD700" radius="0.5" position="0 0 0"></a-sphere>
                         
-                        <!-- Head -->
-                        <a-sphere color="#FFD700" radius="0.5" position="0 0.8 0"></a-sphere>
+                        <!-- Cabeza -->
+                        <a-sphere color="#FFD700" radius="0.45" position="0 0.7 0"></a-sphere>
                         
-                        <!-- Ears -->
-                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
-                                position="-0.3 1.3 0" rotation="0 0 -20">
-                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
-                                    position="0 0.3 0"></a-cone>
+                        <!-- Orejas -->
+                        <a-cone color="#FFD700" radius-bottom="0.12" radius-top="0.03" height="0.5" 
+                                position="-0.25 1.1 0" rotation="0 0 -15">
+                            <a-cone color="#000000" radius-bottom="0.08" radius-top="0.01" height="0.15" 
+                                    position="0 0.25 0"></a-cone>
                         </a-cone>
-                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
-                                position="0.3 1.3 0" rotation="0 0 20">
-                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
-                                    position="0 0.3 0"></a-cone>
+                        <a-cone color="#FFD700" radius-bottom="0.12" radius-top="0.03" height="0.5" 
+                                position="0.25 1.1 0" rotation="0 0 15">
+                            <a-cone color="#000000" radius-bottom="0.08" radius-top="0.01" height="0.15" 
+                                    position="0 0.25 0"></a-cone>
                         </a-cone>
                         
-                        <!-- Eyes -->
-                        <a-sphere color="#1a1a1a" radius="0.08" position="-0.15 0.9 0.4"></a-sphere>
-                        <a-sphere color="#1a1a1a" radius="0.08" position="0.15 0.9 0.4"></a-sphere>
+                        <!-- Ojos -->
+                        <a-sphere color="#000000" radius="0.07" position="-0.13 0.8 0.35"></a-sphere>
+                        <a-sphere color="#000000" radius="0.07" position="0.13 0.8 0.35"></a-sphere>
+                        <a-sphere color="#ffffff" radius="0.03" position="-0.11 0.82 0.38"></a-sphere>
+                        <a-sphere color="#ffffff" radius="0.03" position="0.15 0.82 0.38"></a-sphere>
                         
-                        <!-- Cheeks -->
-                        <a-circle color="#FF0000" radius="0.12" position="-0.35 0.75 0.35" rotation="0 -30 0"></a-circle>
-                        <a-circle color="#FF0000" radius="0.12" position="0.35 0.75 0.35" rotation="0 30 0"></a-circle>
+                        <!-- Mejillas -->
+                        <a-circle color="#FF0000" radius="0.1" position="-0.3 0.65 0.3" rotation="0 -20 0"></a-circle>
+                        <a-circle color="#FF0000" radius="0.1" position="0.3 0.65 0.3" rotation="0 20 0"></a-circle>
                         
-                        <!-- Nose -->
-                        <a-sphere color="#1a1a1a" radius="0.05" position="0 0.85 0.45"></a-sphere>
+                        <!-- Nariz -->
+                        <a-sphere color="#000000" radius="0.04" position="0 0.75 0.42"></a-sphere>
                         
-                        <!-- Mouth -->
-                        <a-curve>
-                            <a-curve-point position="-0.1 0.7 0.45"></a-curve-point>
-                            <a-curve-point position="0 0.65 0.45"></a-curve-point>
-                            <a-curve-point position="0.1 0.7 0.45"></a-curve-point>
-                        </a-curve>
+                        <!-- Boca (sonrisa) -->
+                        <a-box color="#000000" width="0.15" height="0.02" depth="0.02" 
+                               position="0 0.65 0.4"></a-box>
                         
-                        <!-- Arms -->
-                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
-                                    position="-0.5 0.2 0" rotation="0 0 45"></a-cylinder>
-                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
-                                    position="0.5 0.2 0" rotation="0 0 -45"></a-cylinder>
+                        <!-- Brazos -->
+                        <a-cylinder color="#FFD700" radius="0.08" height="0.4" 
+                                    position="-0.45 0.15 0" rotation="0 0 40"></a-cylinder>
+                        <a-cylinder color="#FFD700" radius="0.08" height="0.4" 
+                                    position="0.45 0.15 0" rotation="0 0 -40"></a-cylinder>
                         
-                        <!-- Legs -->
-                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
-                                    position="-0.25 -0.5 0"></a-cylinder>
-                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
-                                    position="0.25 -0.5 0"></a-cylinder>
+                        <!-- Piernas -->
+                        <a-cylinder color="#FFD700" radius="0.1" height="0.35" 
+                                    position="-0.2 -0.4 0"></a-cylinder>
+                        <a-cylinder color="#FFD700" radius="0.1" height="0.35" 
+                                    position="0.2 -0.4 0"></a-cylinder>
                         
-                        <!-- Tail (Lightning bolt shape) -->
-                        <a-box color="#8B4513" width="0.1" height="0.6" depth="0.1" 
-                               position="-0.4 0.3 -0.4" rotation="45 0 45"></a-box>
-                        <a-cone color="#FFD700" radius-bottom="0.2" radius-top="0.05" height="0.5" 
-                                position="-0.5 0.5 -0.5" rotation="90 45 0"></a-cone>
+                        <!-- Pies -->
+                        <a-box color="#8B4513" width="0.15" height="0.05" depth="0.2" 
+                               position="-0.2 -0.6 0.05"></a-box>
+                        <a-box color="#8B4513" width="0.15" height="0.05" depth="0.2" 
+                               position="0.2 -0.6 0.05"></a-box>
                         
-                        <!-- Animation -->
+                        <!-- Cola (rayo) -->
+                        <a-box color="#8B4513" width="0.08" height="0.15" depth="0.08" 
+                               position="-0.35 0.4 -0.35" rotation="0 0 0"></a-box>
+                        <a-box color="#FFD700" width="0.25" height="0.08" depth="0.08" 
+                               position="-0.45 0.5 -0.45" rotation="0 45 30"></a-box>
+                        <a-box color="#FFD700" width="0.2" height="0.06" depth="0.06" 
+                               position="-0.55 0.65 -0.5" rotation="0 45 -20"></a-box>
+                        
+                        <!-- Animación de rotación continua -->
                         <a-animation attribute="rotation" 
-                                     dur="10000" 
+                                     from="0 0 0"
                                      to="0 360 0" 
+                                     dur="8000" 
                                      easing="linear" 
                                      repeat="indefinite"></a-animation>
+                        
+                        <!-- Animación de flotación -->
                         <a-animation attribute="position" 
+                                     from="0 0.5 -3" 
+                                     to="0 0.7 -3" 
                                      dur="2000" 
-                                     from="0 0 -4" 
-                                     to="0 0.3 -4" 
                                      direction="alternate" 
                                      easing="ease-in-out-sine" 
                                      repeat="indefinite"></a-animation>
                     </a-entity>
 
-                    <!-- Camera -->
-                    <a-camera>
-                        <a-cursor color="#FFD700"></a-cursor>
-                    </a-camera>
+                    <!-- Suelo/Plataforma -->
+                    <a-circle color="#90EE90" radius="1.5" rotation="-90 0 0" position="0 -0.6 -3"></a-circle>
+
+                    <!-- Cámara fija -->
+                    <a-entity camera look-controls="enabled: false" position="0 1.6 0"></a-entity>
                 </a-scene>
             </div>
 
             <div class="controls-info">
-                <p>💡 <strong>Controles:</strong></p>
-                <p>🖱️ <strong>Mouse:</strong> Arrastra para rotar la vista</p>
-                <p>🔍 <strong>Scroll:</strong> Acercar/alejar (en algunos navegadores)</p>
-                <p>📱 <strong>Móvil:</strong> Toca y arrastra para rotar</p>
+                <p>💡 <strong>Info:</strong> Pikachu gira automáticamente y flota. ¡Disfruta la vista!</p>
             </div>
         </div>
     </section>
@@ -224,82 +224,54 @@
             <div id="ar-container-simple" class="ar-container" style="display: none;">
                 <a-scene 
                     embedded 
-                    arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
                     vr-mode-ui="enabled: false"
-                    renderer="logarithmicDepthBuffer: true;">
+                    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
                     
                     <!-- Pikachu aparece directamente frente a la cámara -->
-                    <a-entity id="pikachu-ar-simple" position="0 -1 -3" scale="0.8 0.8 0.8">
+                    <a-entity id="pikachu-ar-simple" position="0 0 -2" scale="0.6 0.6 0.6">
                         <!-- Cuerpo -->
-                        <a-sphere color="#FFD700" radius="0.6"></a-sphere>
-                        <a-sphere color="#FFD700" radius="0.5" position="0 0.8 0"></a-sphere>
+                        <a-sphere color="#FFD700" radius="0.5"></a-sphere>
+                        <a-sphere color="#FFD700" radius="0.45" position="0 0.7 0"></a-sphere>
                         
                         <!-- Orejas -->
-                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
-                                position="-0.3 1.3 0" rotation="0 0 -20">
-                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
-                                    position="0 0.3 0"></a-cone>
+                        <a-cone color="#FFD700" radius-bottom="0.12" radius-top="0.03" height="0.5" 
+                                position="-0.25 1.1 0" rotation="0 0 -15">
+                            <a-cone color="#000000" radius-bottom="0.08" radius-top="0.01" height="0.15" 
+                                    position="0 0.25 0"></a-cone>
                         </a-cone>
-                        <a-cone color="#FFD700" radius-bottom="0.15" radius-top="0.05" height="0.6" 
-                                position="0.3 1.3 0" rotation="0 0 20">
-                            <a-cone color="#1a1a1a" radius-bottom="0.1" radius-top="0.02" height="0.2" 
-                                    position="0 0.3 0"></a-cone>
+                        <a-cone color="#FFD700" radius-bottom="0.12" radius-top="0.03" height="0.5" 
+                                position="0.25 1.1 0" rotation="0 0 15">
+                            <a-cone color="#000000" radius-bottom="0.08" radius-top="0.01" height="0.15" 
+                                    position="0 0.25 0"></a-cone>
                         </a-cone>
                         
                         <!-- Ojos -->
-                        <a-sphere color="#1a1a1a" radius="0.08" position="-0.15 0.9 0.4"></a-sphere>
-                        <a-sphere color="#1a1a1a" radius="0.08" position="0.15 0.9 0.4"></a-sphere>
+                        <a-sphere color="#000000" radius="0.07" position="-0.13 0.8 0.35"></a-sphere>
+                        <a-sphere color="#000000" radius="0.07" position="0.13 0.8 0.35"></a-sphere>
                         
                         <!-- Mejillas -->
-                        <a-circle color="#FF0000" radius="0.12" position="-0.35 0.75 0.35" rotation="0 -30 0"></a-circle>
-                        <a-circle color="#FF0000" radius="0.12" position="0.35 0.75 0.35" rotation="0 30 0"></a-circle>
-                        
-                        <!-- Nariz -->
-                        <a-sphere color="#1a1a1a" radius="0.05" position="0 0.85 0.45"></a-sphere>
-                        
-                        <!-- Brazos -->
-                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
-                                    position="-0.5 0.2 0" rotation="0 0 45"></a-cylinder>
-                        <a-cylinder color="#FFD700" radius="0.1" height="0.5" 
-                                    position="0.5 0.2 0" rotation="0 0 -45"></a-cylinder>
-                        
-                        <!-- Piernas -->
-                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
-                                    position="-0.25 -0.5 0"></a-cylinder>
-                        <a-cylinder color="#FFD700" radius="0.12" height="0.4" 
-                                    position="0.25 -0.5 0"></a-cylinder>
-                        
-                        <!-- Cola -->
-                        <a-cone color="#FFD700" radius-bottom="0.2" radius-top="0.05" height="0.5" 
-                                position="-0.5 0.5 -0.5" rotation="90 45 0"></a-cone>
+                        <a-circle color="#FF0000" radius="0.1" position="-0.3 0.65 0.3" rotation="0 -20 0"></a-circle>
+                        <a-circle color="#FF0000" radius="0.1" position="0.3 0.65 0.3" rotation="0 20 0"></a-circle>
                         
                         <!-- Animación de rotación -->
                         <a-animation attribute="rotation" 
-                                     dur="8000" 
+                                     from="0 0 0"
                                      to="0 360 0" 
+                                     dur="6000" 
                                      easing="linear" 
-                                     repeat="indefinite"></a-animation>
-                        
-                        <!-- Animación de flotación -->
-                        <a-animation attribute="position" 
-                                     dur="2000" 
-                                     from="0 -1 -3" 
-                                     to="0 -0.5 -3" 
-                                     direction="alternate" 
-                                     easing="ease-in-out-sine" 
                                      repeat="indefinite"></a-animation>
                     </a-entity>
                     
-                    <a-entity camera look-controls></a-entity>
+                    <a-entity camera look-controls="enabled: false"></a-entity>
                 </a-scene>
                 
                 <button class="btn-close-ar" onclick="cerrarAR()">✕ Cerrar</button>
                 
                 <div class="ar-instructions-overlay">
                     <div class="ar-help-box">
-                        <p>🎯 <strong>Pikachu está frente a ti!</strong></p>
-                        <p>📱 Mueve tu dispositivo para verlo desde diferentes ángulos</p>
-                        <p>⚡ Pikachu está flotando y girando</p>
+                        <p>🎯 <strong>¡Pikachu está frente a ti!</strong></p>
+                        <p>📱 Mueve tu dispositivo lentamente</p>
+                        <p>⚡ Si no lo ves, mueve el teléfono un poco</p>
                     </div>
                 </div>
             </div>

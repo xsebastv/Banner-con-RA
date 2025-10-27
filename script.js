@@ -14,42 +14,78 @@ function activarARSimple() {
     const arContainer = document.getElementById('ar-container-simple');
     const arButtonContainer = document.getElementById('ar-button-container');
     
-    if (arContainer && arButtonContainer) {
-        // Verificar si el navegador soporta getUserMedia
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Solicitar permiso para acceder a la cámara
-            navigator.mediaDevices.getUserMedia({ 
-                video: { 
-                    facingMode: 'environment' // Cámara trasera en móviles
-                } 
-            })
-                .then(function(stream) {
-                    // Detener el stream inmediatamente (solo queremos verificar el permiso)
-                    stream.getTracks().forEach(track => track.stop());
-                    
-                    // Mostrar el contenedor AR
-                    arContainer.style.display = 'block';
-                    arButtonContainer.style.display = 'none';
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Mensaje de éxito
-                    console.log('✅ AR Directo activado - ¡Pikachu está frente a ti!');
-                    
-                    // Mostrar alerta amigable
-                    setTimeout(() => {
-                        if (confirm('🎉 ¡AR Activado!\n\n⚡ Pikachu aparecerá frente a ti\n📱 Mueve tu dispositivo para verlo mejor\n\n¿Todo listo?')) {
-                            console.log('Usuario listo para AR');
-                        }
-                    }, 1000);
-                })
-                .catch(function(error) {
-                    console.error('Error al acceder a la cámara:', error);
-                    alert('❌ No se pudo acceder a la cámara.\n\n📱 Por favor:\n1. Permite el acceso a la cámara\n2. Verifica que ninguna otra app esté usando la cámara\n3. Intenta recargar la página\n\nError: ' + error.message);
-                });
-        } else {
-            alert('❌ Tu navegador no soporta AR.\n\nPor favor usa:\n✅ Chrome (Android/PC)\n✅ Safari (iPhone/iPad)\n✅ Firefox (Android/PC)');
-        }
+    if (!arContainer || !arButtonContainer) {
+        alert('❌ Error: Elementos AR no encontrados');
+        return;
     }
+    
+    // Verificar soporte de cámara
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        alert('❌ Tu navegador no soporta acceso a la cámara.\n\n✅ Por favor usa:\n- Chrome (Android/PC)\n- Safari (iPhone/iPad)\n- Firefox (Android/PC)');
+        return;
+    }
+    
+    // Solicitar acceso a la cámara
+    navigator.mediaDevices.getUserMedia({ 
+        video: { 
+            facingMode: 'environment', // Cámara trasera en móviles
+            width: { ideal: 1280 },
+            height: { ideal: 720 }
+        } 
+    })
+    .then(function(stream) {
+        console.log('✅ Cámara activada correctamente');
+        
+        // Detener el stream de prueba
+        stream.getTracks().forEach(track => track.stop());
+        
+        // Mostrar el contenedor AR
+        arContainer.style.display = 'block';
+        arButtonContainer.style.display = 'none';
+        document.body.style.overflow = 'hidden';
+        
+        // Esperar a que A-Frame inicialice
+        setTimeout(() => {
+            const scene = arContainer.querySelector('a-scene');
+            if (scene) {
+                console.log('✅ Escena A-Frame cargada');
+                
+                // Forzar renderizado
+                scene.renderer.setPixelRatio(window.devicePixelRatio);
+                
+                // Mostrar mensaje de éxito
+                setTimeout(() => {
+                    console.log('🎉 AR listo! Pikachu debería estar visible');
+                }, 1000);
+            }
+        }, 500);
+        
+        // Mensaje de ayuda
+        console.log('💡 Tip: Mueve tu dispositivo lentamente para ver a Pikachu');
+    })
+    .catch(function(error) {
+        console.error('❌ Error al acceder a la cámara:', error);
+        
+        let mensaje = '❌ No se pudo acceder a la cámara.\n\n';
+        
+        if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+            mensaje += '� Permiso denegado.\n\n';
+            mensaje += 'Por favor:\n';
+            mensaje += '1. Permite el acceso a la cámara\n';
+            mensaje += '2. Recarga la página\n';
+            mensaje += '3. Intenta de nuevo';
+        } else if (error.name === 'NotFoundError') {
+            mensaje += '📷 No se encontró cámara.\n\n';
+            mensaje += 'Verifica que tu dispositivo tenga cámara.';
+        } else if (error.name === 'NotReadableError') {
+            mensaje += '⚠️ Cámara en uso.\n\n';
+            mensaje += 'Cierra otras apps que usen la cámara.';
+        } else {
+            mensaje += 'Error: ' + error.message;
+        }
+        
+        alert(mensaje);
+    });
 }
 
 // Función para activar AR con Marcador (backup)

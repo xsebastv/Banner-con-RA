@@ -225,12 +225,19 @@
                 <a-scene 
                     embedded 
                     vr-mode-ui="enabled: false"
-                    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+                    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+                    renderer="logarithmicDepthBuffer: true; precision: medium;">
                     
-                    <!-- Pikachu aparece directamente frente a la cámara -->
-                    <a-entity id="pikachu-ar-simple" position="0 0 -2" scale="0.6 0.6 0.6">
+                    <!-- Cámara AR con controles habilitados -->
+                    <a-camera gps-camera rotation-reader look-controls-enabled="true" arjs-look-controls="smoothingFactor: 0.1"></a-camera>
+                    
+                    <!-- Pikachu flotando en el espacio AR -->
+                    <a-entity id="pikachu-ar-simple" 
+                              position="0 0 -3" 
+                              scale="0.8 0.8 0.8"
+                              look-at="[camera]">
                         <!-- Cuerpo -->
-                        <a-sphere color="#FFD700" radius="0.5"></a-sphere>
+                        <a-sphere color="#FFD700" radius="0.5" position="0 0 0"></a-sphere>
                         <a-sphere color="#FFD700" radius="0.45" position="0 0.7 0"></a-sphere>
                         
                         <!-- Orejas -->
@@ -253,25 +260,33 @@
                         <a-circle color="#FF0000" radius="0.1" position="-0.3 0.65 0.3" rotation="0 -20 0"></a-circle>
                         <a-circle color="#FF0000" radius="0.1" position="0.3 0.65 0.3" rotation="0 20 0"></a-circle>
                         
-                        <!-- Animación de rotación -->
+                        <!-- Animación de rotación Y -->
                         <a-animation attribute="rotation" 
                                      from="0 0 0"
                                      to="0 360 0" 
-                                     dur="6000" 
+                                     dur="8000" 
                                      easing="linear" 
                                      repeat="indefinite"></a-animation>
+                        
+                        <!-- Animación de flotación -->
+                        <a-animation attribute="position" 
+                                     from="0 0 -3" 
+                                     to="0 0.5 -3" 
+                                     dur="2500" 
+                                     direction="alternate" 
+                                     easing="ease-in-out-sine" 
+                                     repeat="indefinite"></a-animation>
                     </a-entity>
-                    
-                    <a-entity camera look-controls="enabled: false"></a-entity>
                 </a-scene>
                 
                 <button class="btn-close-ar" onclick="cerrarAR()">✕ Cerrar</button>
                 
                 <div class="ar-instructions-overlay">
                     <div class="ar-help-box">
-                        <p>🎯 <strong>¡Pikachu está frente a ti!</strong></p>
-                        <p>📱 Mueve tu dispositivo lentamente</p>
-                        <p>⚡ Si no lo ves, mueve el teléfono un poco</p>
+                        <p>🎯 <strong>¡Mueve tu celular!</strong></p>
+                        <p>📱 Gira el dispositivo para ver a Pikachu</p>
+                        <p>⚡ El modelo sigue tu cámara</p>
+                        <p>🔄 Pikachu gira y flota automáticamente</p>
                     </div>
                 </div>
             </div>
@@ -332,12 +347,17 @@
             </div>
 
             <div id="ar-button-container" class="ar-button-container">
+                <div class="ar-info-box">
+                    <h3>🎮 Dos Modos de Realidad Aumentada</h3>
+                    <p>Elige cómo quieres ver a Pikachu:</p>
+                </div>
+                
                 <div class="ar-modes">
                     <button class="btn-ar btn-ar-primary" onclick="activarARSimple()">
                         <span class="ar-icon">⚡</span>
                         <div>
-                            <strong>AR Directo</strong>
-                            <small>Sin marcador - Más fácil</small>
+                            <strong>AR Libre</strong>
+                            <small>Mueve el celular - Sin marcador</small>
                         </div>
                     </button>
                     
@@ -345,11 +365,15 @@
                         <span class="ar-icon">📱</span>
                         <div>
                             <strong>AR con Marcador</strong>
-                            <small>Requiere Hiro - Más estable</small>
+                            <small>Usa marcador Hiro - Más estable</small>
                         </div>
                     </button>
                 </div>
-                <p class="ar-note">💡 Recomendado: Prueba primero el AR Directo</p>
+                
+                <div class="ar-tips">
+                    <p>💡 <strong>AR Libre:</strong> Pikachu aparece frente a ti. Mueve tu celular para verlo desde todos los ángulos.</p>
+                    <p>📌 <strong>AR Marcador:</strong> Pikachu aparece sobre el marcador Hiro impreso.</p>
+                </div>
             </div>
         </div>
     </section>

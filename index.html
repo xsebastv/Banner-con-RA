@@ -35,8 +35,8 @@
             <div class="banner-content">
                 <h1 class="banner-title">¡Atrápalos Ya!</h1>
                 <p class="banner-subtitle">Explora el mundo de Pokémon en 3D</p>
-                <button class="btn-primary" onclick="scrollToSection('modelo3d')">Ver Modelo 3D</button>
-                <button class="btn-secondary" onclick="activarAR()">Activar RA</button>
+                <button class="btn-primary" id="btn-ver-modelo">Ver Modelo 3D</button>
+                <button class="btn-secondary" id="btn-activar-ar">Activar RA</button>
             </div>
         </div>
     </section>
@@ -264,13 +264,12 @@
             </p>
             
             <!-- AR Container Simple (Sin marcador) -->
-            <div id="ar-container-simple" class="ar-container" style="display: none;">
+            <div id="ar-container-simple" class="ar-container">
                 <a-scene 
                     embedded 
                     vr-mode-ui="enabled: false"
                     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false; displayWidth: 100%; displayHeight: 100%;"
-                    renderer="logarithmicDepthBuffer: true; precision: medium; alpha: true;"
-                    style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                    renderer="logarithmicDepthBuffer: true; precision: medium; alpha: true;">
                     
                     <!-- Cámara AR optimizada -->
                     <a-camera 
@@ -336,7 +335,7 @@
                     </a-entity>
                 </a-scene>
                 
-                <button class="btn-close-ar" onclick="cerrarAR()">✕ Cerrar</button>
+                <button class="btn-close-ar" id="btn-cerrar-ar">✕ Cerrar</button>
                 
                 <div class="ar-instructions-overlay">
                     <div class="ar-help-box">
@@ -348,7 +347,7 @@
             </div>
 
             <div id="ar-button-container" class="ar-button-container">
-                <button class="btn-ar btn-ar-primary" onclick="activarARSimple()">
+                <button class="btn-ar btn-ar-primary" id="btn-activar-ar-simple">
                     <span class="ar-icon">⚡</span>
                     <div>
                         <strong>Activar Realidad Aumentada</strong>

@@ -306,6 +306,29 @@ setInterval(hideUnwantedVideos, 1000);
 
 // Inicializar todas las funciones cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
+    // Event Listeners para los botones
+    const btnVerModelo = document.getElementById('btn-ver-modelo');
+    const btnActivarAR = document.getElementById('btn-activar-ar');
+    const btnActivarARSimple = document.getElementById('btn-activar-ar-simple');
+    const btnCerrarAR = document.getElementById('btn-cerrar-ar');
+    
+    if (btnVerModelo) {
+        btnVerModelo.addEventListener('click', () => scrollToSection('modelo3d'));
+    }
+    
+    if (btnActivarAR) {
+        btnActivarAR.addEventListener('click', activarAR);
+    }
+    
+    if (btnActivarARSimple) {
+        btnActivarARSimple.addEventListener('click', activarARSimple);
+    }
+    
+    if (btnCerrarAR) {
+        btnCerrarAR.addEventListener('click', cerrarAR);
+    }
+    
+    // Inicializar animaciones y efectos
     animateOnScroll();
     initBanner();
     hideUnwantedVideos(); // Ocultar videos desde el inicio
